@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - 10.14.2
+  - v12
+  - v10
+  - v8
+  - v6
+  - v4

@@ -1,0 +1,81 @@
+{
+  "name": "mina-admin",
+  "version": "0.1.0",
+  "description": "mina admin",
+  "homepage": "https://github.com/alexayan/mina-admin",
+  "author": {
+    "name": "alexayan",
+    "email": "yanhaibiao1991@gmail.com",
+    "url": "https://github.com/alexayan"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "miniprogram"
+  ],
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "prettier": "^1.18.2",
+    "husky": "^3.0.1",
+    "lint-staged": "^9.2.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-config-xo": "^0.26.0",
+    "jest": "^24.8.0"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error",
+      "capitalized-comments": "warn",
+      "camelcase": "warn"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
+  },
+  "repository": "alexayan/mina-admin",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "jimp": "^0.8.4",
+    "jsdom": "^15.2.0",
+    "lodash": "^4.17.15",
+    "log4js": "^5.2.2",
+    "moment": "^2.24.0",
+    "node-fetch": "^2.6.0",
+    "qrcode-terminal": "^0.12.0",
+    "term-img": "^4.1.0",
+    "terminal-image": "^0.2.0",
+    "url": "^0.11.0"
+  }
+}
