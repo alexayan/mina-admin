@@ -1,4 +1,4 @@
-# mina-admin [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# mina-admin [![NPM version][npm-image]][npm-url]
 > 微信小程序公众平台后台功能非官方 SDK
 > 
 > 帮助构建小程序自动化系统，小程序管理后台
@@ -223,5 +223,3 @@ BSD-3-Clause © [alexayan](https://github.com/alexayan)
 
 [npm-image]: https://badge.fury.io/js/mina-admin.svg
 [npm-url]: https://npmjs.org/package/mina-admin
-[daviddm-image]: https://david-dm.org/alexayan/mina-admin.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/alexayan/mina-admin
