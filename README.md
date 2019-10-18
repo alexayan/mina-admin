@@ -95,7 +95,7 @@ admin.getUser()
 
 ## 内置指令
 
-### MinaCodeCommand
+### [MinaCodeCommand](lib/commands/MinaCodeCommand.js)
 
 提供小程序版本管理功能（获取所有版本列表，版本设为体验版，版本提审，撤回提审，版本发布）
 
@@ -141,7 +141,7 @@ const codes = await this.exec("mina_code", {
 });
 ```
 
-### MinaExprUsersCommand
+### [MinaExprUsersCommand](lib/commands/MinaExprUsersCommand.js)
 
 提供小程序体验成员管理（查询，添加，删除）
 
