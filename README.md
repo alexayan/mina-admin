@@ -101,7 +101,7 @@ admin.getUser()
 
 ```js
 // 获取当前的小程序版本（线上版本，审核版本，开发版本）
-const codes = await this.exec("mina_code", {
+const codes = await admin.exec("mina_code", {
   type: 'list'
 });
 
@@ -112,7 +112,7 @@ console.log(codes.online) // 线上版本 Code
 
 ```js
 // 版本设为体验版
-const codes = await this.exec("mina_code", {
+const codes = await admin.exec("mina_code", {
   type: 'expr',
   code: Code
 });
@@ -120,7 +120,7 @@ const codes = await this.exec("mina_code", {
 
 ```js
 // 版本提审
-const codes = await this.exec("mina_code", {
+const codes = await admin.exec("mina_code", {
   type: 'review',
   code: Code
 });
@@ -128,14 +128,14 @@ const codes = await this.exec("mina_code", {
 
 ```js
 // 撤回提审
-const codes = await this.exec("mina_code", {
+const codes = await admin.exec("mina_code", {
   type: 'cancel_review'
 });
 ```
 
 ```js
 // 版本发布到线上
-const codes = await this.exec("mina_code", {
+const codes = await admin.exec("mina_code", {
   type: 'publish',
   code: Code
 });
@@ -147,7 +147,7 @@ const codes = await this.exec("mina_code", {
 
 ```js
 // 获取所有有体验版权限的成员
-const users = await this.exec("mina_expr_users", {
+const users = await admin.exec("mina_expr_users", {
   type: 'list'
 });
 
@@ -156,7 +156,7 @@ console.log(users) // [User, User]
 
 ```js
 // 添加指定用户为体验版成员
-const users = await this.exec("mina_expr_users", {
+const users = await admin.exec("mina_expr_users", {
   type: 'add',
   users: [User, User]
 });
@@ -164,7 +164,7 @@ const users = await this.exec("mina_expr_users", {
 
 ```js
 // 删除指定体验版成员
-const users = await this.exec("mina_expr_users", {
+const users = await admin.exec("mina_expr_users", {
   type: 'remove',
   users: [User, User]
 });
