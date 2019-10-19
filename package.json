@@ -73,9 +73,6 @@
     "log4js": "^5.2.2",
     "moment": "^2.24.0",
     "node-fetch": "^2.6.0",
-    "qrcode-terminal": "^0.12.0",
-    "term-img": "^4.1.0",
-    "terminal-image": "^0.2.0",
     "url": "^0.11.0"
   }
 }
