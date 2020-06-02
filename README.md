@@ -176,7 +176,6 @@ const users = await admin.exec("mina_expr_users", {
 生成任意小程序的小程序码
 
 ```js
-// 获取所有有体验版权限的成员
 const base64ImageStr = await admin.exec("mina_qrcode", {
   type: 'gen',
   appId: '抽奖助手',
