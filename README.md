@@ -176,6 +176,7 @@ const users = await admin.exec("mina_expr_users", {
 生成任意小程序的小程序码
 
 ```js
+// 生成小程序码
 const base64ImageStr = await admin.exec("mina_qrcode", {
   type: 'gen',
   appId: '抽奖助手',
@@ -183,6 +184,14 @@ const base64ImageStr = await admin.exec("mina_qrcode", {
 });
 
 console.log(base64ImageStr) // Base64 encode image string
+```
+
+```js
+// 获取 appId
+const appId = await admin.exec("mina_qrcode", {
+  type: 'appid',
+  appName: '抽奖助手'
+});
 ```
 
 ## Command Api
