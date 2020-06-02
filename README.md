@@ -8,6 +8,7 @@
 - [x] 小程序后台登录
 - [x] 小程序体验成员管理（查询，添加，删除）
 - [x] 小程序版本管理（获取所有版本列表，版本设为体验版，版本提审，撤回提审，版本发布）
+- [x] 生成任意小程序的小程序码
 
 ## 安装
 
@@ -168,6 +169,21 @@ const users = await admin.exec("mina_expr_users", {
   type: 'remove',
   users: [User, User]
 });
+```
+
+### [MinaQrcodeCommand](lib/commands/MinaQrcodeCommand.js)
+
+生成任意小程序的小程序码
+
+```js
+// 获取所有有体验版权限的成员
+const base64ImageStr = await admin.exec("mina_qrcode", {
+  type: 'gen',
+  appId: '抽奖助手',
+  appPath: 'pages/index'
+});
+
+console.log(base64ImageStr) // Base64 encode image string
 ```
 
 ## Command Api
