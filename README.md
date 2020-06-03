@@ -9,6 +9,7 @@
 - [x] 小程序体验成员管理（查询，添加，删除）
 - [x] 小程序版本管理（获取所有版本列表，版本设为体验版，版本提审，撤回提审，版本发布）
 - [x] 生成任意小程序的小程序码
+- [x] 客户端开启复制小程序路径
 
 ## 安装
 
@@ -204,9 +205,33 @@ const appId = await admin.exec("mina_qrcode", {
 });
 ```
 
+### [MinaToolsCommand](lib/commands/MinaToolsCommand.js)
+
+小程序工具指令，支持复制小程序路径
+
+```js
+// 开启客户端复制小程序路径功能
+// 该微信用户可打开小程序右上角菜单，点击“复制页面路径”并粘贴至左侧“小程序页面路径”中
+const isSuccess = await admin.exec("mina_tools", {
+  type: 'copy-path',
+  appId: '抽奖助手',
+  userName: 'yanhaibiao1991'
+});
+```
+
+```js
+// 获取 appId
+const appId = await admin.exec("mina_tools", {
+  type: 'appid',
+  appName: '抽奖助手'
+});
+```
+
 ## Command Api
 
 开发者通过继承 Command 来编写自定义指令, 具体例子可以查看 `lib/commands` 目录中的内置指令
+
+内置指令类名和所在文件名必须符合 `AxxBxxCommand` 的格式, 指令名解析为 axx_bxx
 
 ```js
 const {Command} = require("mina-admin");
