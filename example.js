@@ -9,6 +9,7 @@ const admin = new MinaAdmin.Admin({
 async function main() {
   await admin.init();
   await admin.login();
+  await admin.command("mina_visit_official_source")();
   const base64Img = await admin.command("mina_qrcode")({
     type: "gen",
     appId: "抽奖助手",

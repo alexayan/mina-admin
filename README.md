@@ -10,6 +10,7 @@
 - [x] 小程序版本管理（获取所有版本列表，版本设为体验版，版本提审，撤回提审，版本发布）
 - [x] 生成任意小程序的小程序码
 - [x] 客户端开启复制小程序路径
+- [x] 小程序获取公众号文章渠道来源数据
 
 ## 安装
 
@@ -224,6 +225,42 @@ const isSuccess = await admin.exec("mina_tools", {
 const appId = await admin.exec("mina_tools", {
   type: 'appid',
   appName: '抽奖助手'
+});
+```
+
+### [MinaQrcodeCommand](lib/commands/MinaQrcodeCommand.js)
+
+生成任意小程序的小程序码
+
+```js
+// 生成小程序码
+const base64ImageStr = await admin.exec("mina_qrcode", {
+  type: 'gen',
+  appId: '抽奖助手',
+  appPath: 'pages/index'
+});
+
+console.log(base64ImageStr) // Base64 encode image string
+```
+
+```js
+// 获取 appId
+const appId = await admin.exec("mina_qrcode", {
+  type: 'appid',
+  appName: '抽奖助手'
+});
+```
+
+### [MinaVisitOfficialSourceCommand](lib/commands/MinaVisitOfficialSourceCommand.js)
+
+小程序获取公众号文章渠道来源数据
+
+```js
+// 开启客户端复制小程序路径功能
+// 该微信用户可打开小程序右上角菜单，点击“复制页面路径”并粘贴至左侧“小程序页面路径”中
+const resp = await admin.exec("mina_visit_official_source", {
+  page: 1,
+  pageCount: 10
 });
 ```
 
