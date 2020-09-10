@@ -256,8 +256,6 @@ const appId = await admin.exec("mina_qrcode", {
 小程序获取公众号文章渠道来源数据
 
 ```js
-// 开启客户端复制小程序路径功能
-// 该微信用户可打开小程序右上角菜单，点击“复制页面路径”并粘贴至左侧“小程序页面路径”中
 const resp = await admin.exec("mina_visit_official_source", {
   page: 1,
   pageCount: 10
